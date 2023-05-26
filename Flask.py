@@ -1,9 +1,7 @@
-from flask import Flask, render_template, request, jsonify
-import pickle
+from flask import Flask, render_template, request
 import pandas as pd
 import joblib
 import numpy as np
-from sklearn.preprocessing import LabelEncoder
 
 #Loaded the saved model
 model = joblib.load('Future_We_Need.joblib')
@@ -17,8 +15,6 @@ def home():
   return render_template('index.html')
 
 
-# Load the fitted LabelEncoder object
-#le = joblib.load('label_encoder.joblib')
 # Define the API endpoint
 @app.route('/predict', methods=['POST'])
 def predict():
@@ -32,5 +28,5 @@ def predict():
 
 # Start the Flask application
 if __name__ == '__main__':
-    app.run(host='192.168.182.171', port='5000', debug=True)
+    app.run(host='191.165.172.141', port='3000', debug=True)
     
