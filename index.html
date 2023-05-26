@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Future We Need</title>
+</head>
+<!--CSS Stylesheet-->
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body{
+	        background-image: url("https://wallpapercave.com/wp/wp1853050.jpg");
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+            max-width: 900px;
+            width: 100%;
+            border-radius: 6px;
+            padding: 30px;
+            margin: 0 15px;
+            background-color: #fff;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            opacity: 0.85;
+        }
+        .container header{
+            text-align: center;
+            font-size: 30px;
+            font-weight: 700;
+            color: darkgreen;
+            letter-spacing: 2;
+        }
+        .container form{
+            position: relative;
+            margin-top: 16px;
+            min-height: 450px;
+            background-color: #fff;
+        }
+        .container form .details{
+            margin-top: 30px;
+        }
+        .container form .field{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        form .field .form-group{
+            display: flex;
+            width: calc(100% / 3 - 15px);
+            flex-direction: column;
+            margin: 4px 0;
+        }
+        .form-group label{
+            font-size: 14px;
+            font-weight: 500;
+            color: black;
+        }
+        .form-group input{
+            padding: 0 15px;
+            outline: none;
+            font-size: 14px;
+            font-weight: 500;
+            color: darkblue;
+            border: 1px solid #aaa;
+            height: 42px;
+            margin: 8px 0;
+        }
+        .input-field input:is(:focus, :valid){
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.13);
+        }
+        .button{
+            text-align: center;
+        }
+        .button button{
+            cursor: pointer;
+            padding: 10px 0;
+            margin-top: 10px;
+            height: 100%;
+            width: 20%;
+            outline: none;
+            color: #fff;
+            border: none;
+            font-size: 18px;
+            font-weight: 500;
+            border-radius: 7px;
+            letter-spacing: 2px;
+            background: #333;
+        }
+        .button button:hover{
+            background: darkgreen;
+        }
+        p{
+            font-size: 20px;
+            font-weight: 500;
+            color: red;
+            margin-top: 25px;
+            text-align: center;
+        }
+	</style>
+<!--HTML Code-->
+    <body>
+		<div class="container">
+            <header>Prediction Of Stock Growth</header>
+
+            <form method="POST" action="{{ url_for('predict') }}">
+                <div class="field">
+                <div class="form-group">
+                  <label for="Geo-graphical Forest Area (GA)">Geo-graphical Forest Area (GA):</label>
+                  <input type="text" id="Geo-graphical Forest Area (GA)" name="Forest_area" placeholder="Enter total forest area">
+                </div>
+                <div class="form-group">
+                  <label for="total_fat">VDF</label>
+                  <input type="text" id="VDF" name="VDF" placeholder="Enter VDF">
+                </div>
+                <div class="form-group">
+                  <label for="MDF">MDF:</label>
+                  <input type="text" id="MDF" name="MDF" placeholder="Enter MDF">
+                </div>
+                <div class="form-group">
+                  <label for="OF">OF</label>
+                  <input type="text" id="OF" name="OF" placeholder="Enter OF">
+                </div>
+                <div class="form-group">
+                  <label for="Rain(annual)m">Rain(annual)m:</label>
+                  <input type="text" id="Rain(annual)m" name="Rain(annual)m" placeholder="Enter Rain(annual)m">
+                </div>
+            </div>
+            <div class="button">
+                <button type="submit">Predict</button>
+            </div>
+              </form>
+
+            {% if prediction_text %}
+      <div class="prediction">
+        <!--<h2>Prediction:</h2>-->
+        <p>{{ prediction_text }}</p>
+      </div>
+    {% endif %}
+        </div>
+    </body>
+</html>
