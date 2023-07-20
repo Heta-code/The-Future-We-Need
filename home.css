@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f9f9f9;
+    min-height: 100vh;
+}
+#logo {
+    width: 139px;
+    height: 157px;
+    position: relative;
+    margin-top: -138px;
+    top: 108px;
+    left: -112px;
+}
+  
+  /* Example styling for the login button */
+  .btnLogin-popup {
+    margin-left: auto; /* Push the button to the right */
+    padding: 8px 16px; /* Add padding to the button */
+    background-color: #000; /* Set the background color */
+    color: #fff; /* Set the text color */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Add border radius */
+  }
+  
+  .navbar {
+    position: relative;
+    left: 130px;
+    top: 24px;
+}
+header {
+    position: absolute;
+    top: 0;
+    left: 99px;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 2em;
+    color: #359381;
+    pointer-events: none;
+    margin-right: 270px;
+}
+
+/*----- Navigation Bar ----- */
+.navbar a {
+    padding: 6px 25px;
+    font-size: 1.1em;
+    color: #359381;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: 600;
+    margin-left: 0 100px;
+}
+
+.navbar a:hover {
+    background: #359381;
+    color: white;
+}
+
+.navbar .btnLogin-popup {
+    width: 90px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #359381;
+    outline: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 500;
+    color: #359381;
+    margin-left: 10px;
+    transition: .5s;
+}
+
+.navbar .btnLogin-popup:hover {
+    background: #359381;
+    color: white;
+}
+
+/*----- Parallax Effect ----- */
+.parallax {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#text {
+    position: absolute;
+    font-size: 4em;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
+}
+
+.parallax img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+}
+
+.sec {
+    position: relative;
+    background: #003329;
+    padding: 100px;
+    min-height: 100vh;
+}
+
+.sec h3 {
+    font-size: 2.5em;
+    color: white;
+    margin-bottom: 10px;
+    position: relative;
+    left: 2%;
+}
+
+.sec p {
+    font-size: 1em;
+    color: whitesmoke;
+    font-weight: 350;
+    position: relative;
+    left: 5%;
+}
+
+/*----- Developer Button ----- */
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+}
+
+.main a{
+    border: none;
+    outline: none;
+    height: 50px;
+    width: 200px;
+    text-decoration: none;
+    padding: 10px;
+    padding-left: 20px;
+    padding-top: 12px;
+    font-weight: 650;
+    font-size: 18px;
+    color: #003329;
+    background: #29b89e;
+    border-radius: 30px;
+    transition: 0.3s ease;
+}
+.main a:hover {
+    cursor: pointer;
+    background: #35dfbf;
+    box-shadow: 0 0 7px #35dfbf;
+}
+
+.sec h2 {
+    text-align: center;
+    padding-top: 50px;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 25px;
+    color: bisque;
+}

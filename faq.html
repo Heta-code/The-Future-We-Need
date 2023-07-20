@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minor Project - FAQ Page</title>
+    <link rel="stylesheet" href="faq.css">
+    <link rel="icon" type="image/x-icon" href="digiearth.ico">
+</head>
+<body>
+    <img src="undraw_questions.svg">
+    <!--Navigation Bar-->
+    <header>
+        <a href="home.html">
+            <img src="FUTURE WE NEED.png" alt="save earth" id="logo">
+          </a>
+        <nav class="navbar">
+            <a href="demo.html">HOME</a>
+            <a href="home.html">ABOUT</a>
+            <a href="feed-1.html">FEED</a>
+            <a href="#">FAQS</a>
+        </nav>
+    </header>
+    <!--FAQS section-->
+    <div class="container">
+        <h2 class="label">Frequently Asked Quetions?</h2>
+        <div class="accordion">
+            <div class="accordion-item">
+                <button id="accordion-button-1" aria-expanded="false">
+                    <span class="accordion-title">How to check the predictions?</span>
+                    <span class="icon" aria-hidden="true"></span>
+                </button>
+                <div class="accordion-content">
+                    <p>It is important to note that while the model can provide predictions based on historical data, 
+                        future predictions are subject to uncertainties, and external factors like climate change or
+                         unforeseen events may affect the accuracy of the predictions. Regular validation, monitoring, 
+                         and updating of the model are necessary to ensure its relevance and reliability over time. 
+                    </p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button id="accordion-button-2" aria-expanded="false">
+                    <span class="accordion-title">What is the use of Developer's Mode?</span>
+                    <span class="icon" aria-hidden="true"></span>
+                </button>
+                <div class="accordion-content">
+                    <p>In the developer mode we are going to allow the user to be a part of "Future We Need"
+                        comunity.In which they will support us by making contribution in our alogorithm to enhance 
+                        it and make its precdections more efficient and accurate.In this mode they have certain 
+                        rights as we gave them a role on there base of interest and experience.
+                    </p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button id="accordion-button-3" aria-expanded="false">
+                    <span class="accordion-title">How this will help the environment?</span>
+                    <span class="icon" aria-hidden="true"></span>
+                </button>
+                <div class="accordion-content">
+                    <p>This will help people by enlighting them about the knowlegde what is happning in 
+                        the nature due their uncareless nature and ignoring the nature and just want their 
+                        luxary life.It will also help them to understand rthe trend of change in the nature
+                        by observing the past data of some nature agent like rain.
+                    </p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button id="accordion-button-4" aria-expanded="false">
+                    <span class="accordion-title">What predictions are shown in this website?</span>
+                    <span class="icon" aria-hidden="true"></span>
+                </button>
+                <div class="accordion-content">
+                    <p> We have taken last 10 years data to analyze the trend and then we have predicted that 
+                    </p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button id="accordion-button-7" aria-expanded="false">
+                    <span class="accordion-title">Where all the latest updates will be shared?</span>
+                    <span class="icon" aria-hidden="true"></span>
+                </button>
+                <div class="accordion-content">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Facere iusto delectus in cupiditate ipsum dolore, officia, 
+                        eligendi fugit quia earum rem reiciendis iure similique minus 
+                        perferendis minima eius veniam? Dolores!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const items = document.querySelectorAll('.accordion button');
+
+        function toggleAccordion(){
+            const itemToggle = this.getAttribute('aria-expanded');
+
+            for( i = 0; i < items.length; i++){
+                items[i].setAttribute('aria-expanded', 'false');
+            }
+
+            if(itemToggle == 'false'){
+                this.setAttribute('aria-expanded', 'true');
+            }
+        }
+
+        items.forEach((item) => item.addEventListener('click', toggleAccordion));
+    </script>
+</body>
+</html>
+
