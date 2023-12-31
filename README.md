@@ -1,3 +1,8 @@
+#Number of team Members:3
+#Heta Shukla
+#Sanhita Mandaogade
+#Taksh Rana
+
 # The-Future-We-Need
 This project focuses on leveraging machine learning and artificial intelligence techniques to contribute to environmental conservation efforts and predict the growing stock of forests in Indian states. 
 The repository contains a comprehensive dataset spanning from 2011 to 2021, encompassing forest area, vegetation density factor (VDF), mean tree density factor (MDF), organic fraction (OF), and rainfall information.
